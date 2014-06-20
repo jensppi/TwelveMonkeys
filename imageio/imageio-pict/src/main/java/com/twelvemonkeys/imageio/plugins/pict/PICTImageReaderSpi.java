@@ -85,6 +85,7 @@ public class PICTImageReaderSpi extends ImageReaderSpi {
             else {
                 // Skip header 512 bytes for file-based streams
                 stream.reset();
+                stream.mark();
                 PICTImageReader.skipNullHeader(stream);
             }
 
